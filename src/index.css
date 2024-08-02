@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heart-3d {
+    color: #ff0000; /* Red color for the heart */
+    text-shadow:
+      1px 1px 2px #000,       /* Outer dark shadow */
+      -1px -1px 2px #fff,     /* Outer light shadow */
+      2px 2px 4px rgba(0, 0, 0, 0.5), /* Slight shadow for depth */
+      0 0 3px rgba(0, 0, 0, 0.6),     /* Slight inner shadow */
+      0 0 10px rgba(0, 0, 0, 0.2);    /* Additional outer shadow */
+    transform: translateZ(0);
+    transition: transform 0.3s, text-shadow 0.3s;
+  }
+  
+  .heart-3d:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    text-shadow:
+      1px 1px 2px #000,       /* Outer dark shadow */
+      -1px -1px 2px #fff,     /* Outer light shadow */
+      4px 4px 8px rgba(0, 0, 0, 0.7), /* Enhanced shadow for depth */
+      0 0 5px rgba(0, 0, 0, 0.8),     /* Enhanced inner shadow */
+      0 0 15px rgba(0, 0, 0, 0.4);    /* Enhanced outer shadow */
+  }
+  

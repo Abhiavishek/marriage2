@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.heart-3d {
+  color: #ff0000; /* Red color for the heart */
+  text-shadow:
+    1px 1px 2px #000,       /* Outer dark shadow */
+    -1px -1px 2px #fff,     /* Outer light shadow */
+    2px 2px 4px rgba(0, 0, 0, 0.5), /* Slight shadow for depth */
+    0 0 3px rgba(0, 0, 0, 0.6),     /* Slight inner shadow */
+    0 0 10px rgba(0, 0, 0, 0.2);    /* Additional outer shadow */
+  transform: translateZ(0);
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.heart-3d:hover {
+  transform: scale(1.1); /* Slightly increase the size on hover */
+  text-shadow:
+    1px 1px 2px #000,       /* Outer dark shadow */
+    -1px -1px 2px #fff,     /* Outer light shadow */
+    4px 4px 8px rgba(0, 0, 0, 0.7), /* Enhanced shadow for depth */
+    0 0 5px rgba(0, 0, 0, 0.8),     /* Enhanced inner shadow */
+    0 0 15px rgba(0, 0, 0, 0.4);    /* Enhanced outer shadow */
+}
+
+.blink {
+  animation: blink-animation 1.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
